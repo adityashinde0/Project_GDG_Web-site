@@ -21,3 +21,6 @@ Open `site_gdg/index.html` with Live Server or any static server.
 - Keep OAuth client secrets only in local environment.
 - Video is now served via backend proxy route (`/media/hero-video`), so OneDrive link is not exposed in frontend source.
 - Video endpoint allows only requests originating from `FRONTEND_ORIGIN`.
+
+## Demo video
+[Watch project demo video](site_gdg/Video_Project%203.mp4)

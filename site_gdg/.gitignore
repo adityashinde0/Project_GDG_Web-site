@@ -50,6 +50,7 @@ desktop.ini
 *.avi
 *.mkv
 *.webm
+!Video_Project 3.mp4
 
 # ---- Project-specific private files ----
 site_gdg/.env

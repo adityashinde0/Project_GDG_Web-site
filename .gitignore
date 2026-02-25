@@ -31,3 +31,4 @@ desktop.ini
 *.avi
 *.mkv
 *.webm
+!site_gdg/Video_Project 3.mp4
