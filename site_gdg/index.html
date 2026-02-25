@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDG | Login Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="GDG Home">
+                <img src="gdg_logo.webp" alt="GDG Logo">
+            </a>
+            <button class="btn btn-primary btn-sm login-trigger" id="openLogin">LOGIN</button>
+        </div>
+    </nav>
+
+    <main class="login-hero">
+        <div class="hero-shell">
+            <section class="hero-copy">
+                <h1 class="fade-in-up">Secure access for your GDG portal</h1>
+                <p class="fade-in-up delay-1">Sign in with your account to continue to event dashboards, sessions, and organizer tools.</p>
+                <div class="hero-actions fade-in-up delay-2">
+                    <button class="btn btn-primary" id="openLoginHero">Sign In</button>
+                    <a href="#" class="skip-link" id="skipForNow">Skip for now</a>
+                </div>
+            </section>
+            <section class="hero-visual fade-in-up delay-3" aria-hidden="true">
+                <div class="orb"></div>
+                <div class="layer layer-1"></div>
+                <div class="layer layer-2"></div>
+                <div class="layer layer-3"></div>
+                <div class="layer layer-4"></div>
+                <div class="layer layer-5"></div>
+                <div class="layer layer-6"></div>
+            </section>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="loginModal" aria-hidden="true">
+        <div class="login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <button class="modal-close" id="closeLogin" aria-label="Close login">x</button>
+            <div class="signup-head">
+                <img src="gdg_logo.webp" alt="GDG logo" class="signup-logo">
+                <h2 id="loginTitle">Sign up</h2>
+            </div>
+            <form class="signup-form" id="signupForm">
+                <div class="name-row">
+                    <div class="field-group">
+                        <label for="firstName">First name</label>
+                        <input id="firstName" type="text" placeholder="Your first name" autocomplete="given-name">
+                    </div>
+                    <div class="field-group">
+                        <label for="lastName">Last name</label>
+                        <input id="lastName" type="text" placeholder="Your last name" autocomplete="family-name">
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Your email address" autocomplete="email">
+                </div>
+                <button class="btn btn-primary form-submit" type="submit">Continue</button>
+            </form>
+            <div class="or-divider">
+                <span>OR</span>
+            </div>
+            <div class="auth-buttons">
+                <button class="auth-btn" id="googleLoginBtn" type="button">
+                    <span class="auth-icon" aria-hidden="true">
+                        <svg viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M255.878 133.451c0-10.634-.863-18.936-2.872-27.515H130.55v48.448h71.947c-1.451 12.04-9.283 30.172-26.686 42.357l-.244 1.622 38.755 29.999 2.685.268c24.66-22.77 38.87-56.281 38.87-95.179" fill="#4285F4"/>
+                            <path d="M130.55 261.1c35.238 0 64.817-11.64 86.436-31.652l-41.196-31.889c-11.024 7.686-25.815 13.061-45.24 13.061-34.527 0-63.817-22.771-74.208-54.25l-1.53.13-40.298 31.162-.526 1.465C35.48 232.372 79.49 261.1 130.55 261.1" fill="#34A853"/>
+                            <path d="M56.342 156.37c-2.739-8.019-4.311-16.572-4.311-25.37 0-8.798 1.572-17.351 4.167-25.37l-.073-1.731-40.803-31.662-1.335.635A129.07 129.07 0 0 0 0 131c0 20.818 4.994 40.51 13.987 58.127l42.355-32.757" fill="#FBBC05"/>
+                            <path d="M130.55 51.479c24.514 0 41.051 10.634 50.479 19.558l36.84-35.949C195.224 13.807 165.787 0 130.55 0 79.49 0 35.48 28.727 13.987 72.873l42.211 32.758c10.535-31.48 39.825-54.152 74.352-54.152" fill="#EB4335"/>
+                        </svg>
+                    </span>
+                    Continue with Google
+                </button>
+                <button class="auth-btn" id="microsoftLoginBtn" type="button">
+                    <span class="auth-icon" aria-hidden="true">
+                        <svg viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#f35325" d="M1 1h10v10H1z"/>
+                            <path fill="#81bc06" d="M12 1h10v10H12z"/>
+                            <path fill="#05a6f0" d="M1 12h10v10H1z"/>
+                            <path fill="#ffba08" d="M12 12h10v10H12z"/>
+                        </svg>
+                    </span>
+                    Continue with Microsoft
+                </button>
+                <button class="auth-btn" id="githubLoginBtn" type="button">
+                    <span class="auth-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M12 0a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61a3.17 3.17 0 0 0-1.33-1.75c-1.09-.74.08-.72.08-.72a2.5 2.5 0 0 1 1.83 1.23a2.54 2.54 0 0 0 3.47.99a2.54 2.54 0 0 1 .76-1.59c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22a4.31 4.31 0 0 1 .12-3.17s1.01-.32 3.3 1.23a11.43 11.43 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23a4.31 4.31 0 0 1 .12 3.17a4.63 4.63 0 0 1 1.23 3.22c0 4.61-2.8 5.62-5.48 5.92a2.85 2.85 0 0 1 .81 2.21v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 0"/>
+                        </svg>
+                    </span>
+                    Continue with GitHub
+                </button>
+            </div>
+            <p class="helper-text">Already have an account? <a href="#" id="alreadySignIn">Sign in</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
