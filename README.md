@@ -23,4 +23,6 @@ Open `site_gdg/index.html` with Live Server or any static server.
 - Video endpoint allows only requests originating from `FRONTEND_ORIGIN`.
 
 ## Demo video
-[Watch project demo video](site_gdg/Video_Project%203.mp4)
+<video src="https://github.com/adityashinde0/Project_GDG_Web-site/raw/main/site_gdg/Video_Project%203.mp4" controls width="900"></video>
+
+[Open video directly](https://github.com/adityashinde0/Project_GDG_Web-site/blob/main/site_gdg/Video_Project%203.mp4)
