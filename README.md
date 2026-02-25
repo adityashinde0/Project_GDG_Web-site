@@ -1,4 +1,4 @@
-﻿# GDG Site + Backend
+# GDG Site + Backend
 
 ## Project structure
 - `site_gdg/`: frontend pages and assets
