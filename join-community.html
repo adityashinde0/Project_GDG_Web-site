@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Community | GDG</title>
+    <link rel="stylesheet" href="join-community.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="join-page">
+        <section class="join-card-wrap">
+            <a href="portal.html" class="back-link" aria-label="Back to home page">Back to Home</a>
+
+            <article class="join-card">
+                <h1>Join the Community</h1>
+                <p class="subtext">Fill in your details to become part of the GDG community network.</p>
+
+                <form id="communityJoinForm" novalidate>
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required minlength="2">
+
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Enter your phone number" required pattern="^[0-9+\-\s]{7,15}$">
+
+                    <label for="emailAddress">Email Address</label>
+                    <input id="emailAddress" name="emailAddress" type="email" placeholder="Enter your email" required>
+
+                    <label for="memberType">You Are</label>
+                    <select id="memberType" name="memberType" required>
+                        <option value="">Select an option</option>
+                        <option value="student">Student</option>
+                        <option value="user">User</option>
+                        <option value="community-member">Community Member</option>
+                    </select>
+
+                    <label for="organizationName">College or Business Name</label>
+                    <input id="organizationName" name="organizationName" type="text" placeholder="Enter college or business name" required>
+
+                    <button type="submit">Submit</button>
+                    <p id="formMessage" class="form-message" aria-live="polite"></p>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script src="join-community.js"></script>
+</body>
+</html>
