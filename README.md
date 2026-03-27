@@ -1,4 +1,5 @@
 # GDG Site + Backend
+link of website: https://adityashinde0.github.io/Project_GDG_Web-site/
 
 ## Project structure
 - `site_gdg/`: frontend pages and assets
